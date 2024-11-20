@@ -24,6 +24,20 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "354ed17f-caa0-4bb5-bff4-59018f67b77d"
+      }
+    },
+    "owner": "thientc1979",
+    "plugins": [
+      "expo-build-properties",
+      {
+        "android": {
+          "useCleartextTraffic": true
+        }
+      }
+    ]
   }
 }
