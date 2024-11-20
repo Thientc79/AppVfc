@@ -42,7 +42,6 @@ useEffect(()=>{
         setLoading(true);
         try {
           const token = await AsyncStorage.getItem('@token');
-          console.log(token)
           if (token) {setTokenLogin(token);
 
         const users = await AsyncStorage.getItem('@UsersLogin');
@@ -76,7 +75,6 @@ const LogIn=async(username:string,password:string)=>{
               }
               
               const data = await response.json();
-              console.log(data)
               const { token, login } = data.result;
               await AsyncStorage.setItem('@token', token);
               await AsyncStorage.setItem('@UsersLogin', JSON.stringify([login]));
